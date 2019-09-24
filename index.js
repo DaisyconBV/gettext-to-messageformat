@@ -9,7 +9,7 @@ const defaultOptions = {
   replacements: [
     {
       pattern: /[\\{}#]/g,
-      replacement: '\\$&'
+      replacement: '$&'
     },
     {
       pattern: /%(\d+)(?:\$\w)?/g,
