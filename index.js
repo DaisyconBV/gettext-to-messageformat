@@ -66,10 +66,10 @@ const getMessageFormat = (
 }
 
 const convert = (parse, input, options) => {
-  options = Object.assign(defaultOptions, options)
+  options = Object.assign({}, defaultOptions, options)
   const { headers, translations } = parse(input, options.defaultCharset)
   if (!options.pluralFunction) {
-    options.pluralFunction = getPluralFunction(headers['plural-forms'])
+    options.pluralFunction = getPluralFunction(headers['Plural-Forms'])
   }
   let hasContext = false
   for (const context in translations) {
